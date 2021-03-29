@@ -24,7 +24,7 @@ public class Productor implements Runnable{
             
         this.sharedMemory.setSharedMemory(sharedVariable);
             
-        System.out.println("El productor ingresó el número: "+sharedVariable);
+        System.out.println("El productor "+Thread.currentThread().getName()+" ingresó el número: "+sharedVariable);
          
     } 
     
