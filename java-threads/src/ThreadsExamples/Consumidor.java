@@ -22,7 +22,7 @@ public class Consumidor implements Runnable{
       
         sharedVariable = this.sharedMemory.getSharedMemory();
             
-        System.out.println("El consumidor lee el número: "+sharedVariable);
+        System.out.println("El consumidor "+Thread.currentThread().getName()+" lee el número: "+sharedVariable);
         
         try {
             Thread.sleep(3000);
