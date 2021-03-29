@@ -48,3 +48,12 @@ public void run() {
 `getName()` Devuelve el nombre asignado al hilo.
 
  Más métodos en la documentación de [Oracle](https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html)
+ 
+ #### Synchronized en Java
+ Todos los bloques sincronizados solo pueden tener un hilo ejecutándose dentro de ellos a la vez.
+```
+public synchronized void read()
+{
+   //aquí va el código sincronizado        
+}
+```
