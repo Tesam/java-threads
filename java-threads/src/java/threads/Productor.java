@@ -12,6 +12,7 @@ package java.threads;
 public class Productor implements Runnable{
 
     SharedMemory sharedMemory;
+    int sharedVariable;
     
     Productor(SharedMemory sharedMemory){
         this.sharedMemory = sharedMemory;
@@ -19,11 +20,11 @@ public class Productor implements Runnable{
     
     private synchronized void write(){
             
-        int randomNumber = (int) (Math.random()*(10-1)+1);
+        sharedVariable = (int) (Math.random()*(10-1)+1);
             
-        this.sharedMemory.setSharedMemory(randomNumber);
+        this.sharedMemory.setSharedMemory(sharedVariable);
             
-        System.out.println("El productor ingresó el número: "+randomNumber);
+        System.out.println("El productor ingresó el número: "+sharedVariable);
          
     } 
     
