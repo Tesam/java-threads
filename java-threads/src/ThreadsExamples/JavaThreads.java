@@ -21,8 +21,13 @@ public class JavaThreads {
         Consumidor consumidor = new Consumidor(sharedMemory);
         
         Thread threadProductor = new Thread(productor);
+        Thread threadProductor2 = new Thread(productor);
         Thread threadConsumidor = new Thread(consumidor);
         
+        threadProductor.setName("Productor 1");
+        threadProductor2.setName("Productor 2");
+        
+        threadProductor2.start();
         threadProductor.start();
         threadConsumidor.start();
 
