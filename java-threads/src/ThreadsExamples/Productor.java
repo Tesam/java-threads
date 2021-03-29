@@ -24,13 +24,13 @@ public class Productor implements Runnable{
         
         synchronized(sharedMemory){
             sharedMemory.setSharedMemory(sharedVariable);
-            System.out.println("El productor "+Thread.currentThread().getName()+" ingresó el número: "+sharedVariable);
+            System.out.println("El "+Thread.currentThread().getName()+" ingresó el número: "+sharedVariable);
+        }
         
-            try {
+        try {
                 Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        } catch (InterruptedException e) {
+            System.out.println("INTERRUPTED EXCEPTION "+e.getMessage());
         }
         
     } 
