@@ -24,6 +24,7 @@ public class JavaThreads {
         Thread threadConsumidor = new Thread(consumidor);
         
         threadProductor.setName("Productor 1");
+        threadConsumidor.setName("Consumidor 1");
       
         threadProductor.start();
         threadConsumidor.start();
