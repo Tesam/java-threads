@@ -30,7 +30,9 @@ public class Productor implements Runnable{
     
     @Override
     public void run() {
-        write();
+        for(int i = 0; i < 10; i++){
+            write();
+        }
     }
     
 }
