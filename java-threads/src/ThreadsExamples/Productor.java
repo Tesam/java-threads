@@ -11,7 +11,7 @@ package ThreadsExamples;
  */
 public class Productor implements Runnable{
 
-    SharedMemory sharedMemory;
+    final SharedMemory sharedMemory;
     int sharedVariable;
     
     Productor(SharedMemory sharedMemory){
