@@ -23,6 +23,12 @@ public class Consumidor implements Runnable{
         sharedVariable = this.sharedMemory.getSharedMemory();
             
         System.out.println("El consumidor lee el número: "+sharedVariable);
+        
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
          
     }
 
