@@ -15,7 +15,17 @@ public class JavaThreads {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        SharedMemory sharedMemory = new SharedMemory();
+        
+        Productor productor = new Productor(sharedMemory);        
+        Consumidor consumidor = new Consumidor(sharedMemory);
+        
+        Thread threadProductor = new Thread(productor);
+        Thread threadConsumidor = new Thread(consumidor);
+        
+        threadProductor.start();
+        threadConsumidor.start();
+
     }
     
 }
