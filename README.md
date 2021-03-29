@@ -48,3 +48,29 @@ public void run() {
 `getName()` Devuelve el nombre asignado al hilo.
 
  Más métodos en la documentación de [Oracle](https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html)
+ 
+ #### Synchronized en Java
+ Permite la exclusión mutua.
+ 
+ A través de la creación de Regiones Críticas con bloques sincronizados.
+ ```
+public void read()
+{
+   //Región no crítica del método
+   ...
+   
+   //Región crítica del método
+   synchronized(object){
+   } 
+   
+   //Región no crítica del método
+   ...
+}
+```
+ O métodos sincronizados en donde sólo un hilo a la vez puede ejecutarse dentro.
+```
+public synchronized void read()
+{
+   //aquí va el código sincronizado        
+}
+```
